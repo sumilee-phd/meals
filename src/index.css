@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Jua&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Jua", sans-serif;
+
+  --color-brand-bg: #fefae0;
+  --color-brand-primary: #485422;
+  --color-brand-primary-container: #606c38;
+  --color-brand-secondary: #566342;
+  --color-brand-tertiary: #6c471f;
+  --color-brand-surface-container: #f2efd5;
+  --color-brand-surface-high: #ede9cf;
+  --color-brand-on-surface: #1d1c0d;
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  
+  input, textarea {
+    user-select: text;
+  }
+
+  body {
+    @apply bg-brand-bg text-brand-on-surface font-sans antialiased overflow-x-hidden;
+    overscroll-behavior-y: none;
+  }
+}
+
+.organic-shadow {
+  box-shadow: 0 8px 24px rgba(29, 28, 13, 0.06);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
